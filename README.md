@@ -17,6 +17,8 @@ MATLAB-based interactive reconstruction and visualization of:
 
 The interactive viewer allows frame-by-frame inspection, rotation, zooming, panning, and optional image or video export.
 
+The large `DIC3DPPresults.mat` file required for reconstruction is distributed separately from the GitHub repository as part of the complete reproducibility dataset.
+
 See `3D_ML_reconstruction/README.md` for the required data, software environment, and instructions.
 
 ## 2. Multimodal AI Fusion
@@ -31,6 +33,8 @@ See `Multimodal_AI_fusion/README.md` for environment setup, data organization, a
 
 ## Repository Structure
 
+The complete structure required to run the analyses is:
+
 ```text
 Multifunctional_ML_Skin/
 ├── README.md
@@ -39,8 +43,8 @@ Multifunctional_ML_Skin/
 │   ├── README.md
 │   ├── reconstruct_3D_ML_interactive.m
 │   └── data/
-│       ├── DIC3DPPresults.mat
-│       └── ML_images/
+│       ├── DIC3DPPresults.mat    [distributed separately]
+│       └── ML_images_camera_1/
 │
 └── Multimodal_AI_fusion/
     ├── README.md
@@ -49,5 +53,7 @@ Multifunctional_ML_Skin/
     ├── requirements.txt
     └── data/
 ```
+
+Before running the 3D ML reconstruction code, place the separately distributed `DIC3DPPresults.mat` file in the `3D_ML_reconstruction/data/` directory.
 
 Each analysis folder contains its own README with the instructions required to reproduce or interactively inspect the corresponding results.

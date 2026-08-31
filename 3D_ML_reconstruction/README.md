@@ -9,17 +9,20 @@ The interactive viewer provides four visualization modes:
 - Reconstructed 3D ML
 - 3D effective strain
 
-## Repository Structure
+## Data and Repository Structure
+
+The complete structure required to run the reconstruction is:
 
 ```text
 3D_ML_reconstruction/
 ├── data/
+│   ├── DIC3DPPresults.mat    [distributed separately]
 │   └── ML_images_camera_1/
 ├── reconstruct_3D_ML_interactive.m
 └── README.md
 ```
 
-`DIC3DPPresults.mat` contains the reconstructed 3D geometry, DIC-tracked image coordinates, triangular faces, and effective strain data. Owing to its large file size, the file is distributed separately from the GitHub repository as part of the complete reproducibility dataset.
+`DIC3DPPresults.mat` contains the reconstructed 3D geometry, DIC-tracked image coordinates, triangular faces, and effective strain data. Owing to its large file size, it is distributed separately from the GitHub repository as part of the complete reproducibility dataset.
 
 The `ML_images_camera_1` folder contains the corresponding ML images used for 3D ML reconstruction.
 
@@ -42,18 +45,7 @@ The code may also run with later MATLAB releases, although these were not specif
 
 ## Running the Code
 
-For complete reproduction, place `DIC3DPPresults.mat` in the `data` directory:
-
-```text
-3D_ML_reconstruction/
-├── data/
-│   ├── DIC3DPPresults.mat
-│   └── ML_images_camera_1/
-├── reconstruct_3D_ML_interactive.m
-└── README.md
-```
-
-Then:
+Before running the code, place the separately distributed `DIC3DPPresults.mat` file in the `data` directory alongside `ML_images_camera_1`.
 
 1. Open MATLAB.
 2. Set the MATLAB **Current Folder** to the `3D_ML_reconstruction` directory.
